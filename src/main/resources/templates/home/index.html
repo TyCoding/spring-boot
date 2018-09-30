@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{../../lib/element-ui/lib/theme-chalk/index.css}"/>
+    <link rel="stylesheet" th:href="@{../../lib/font/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{../../css/index.css}"/>
+</head>
+<body>
+
+<div id="app">
+    <!-- header -->
+    <el-menu mode="horizontal" :default-active="activeIndex">
+        <el-menu-item index="0" id="logo">Spring Boot入门</el-menu-item>
+        <el-menu-item index="1"><a href="/index">首页</a></el-menu-item>
+        <el-menu-item index="2"><a href="/goods">商品列表</a></el-menu-item>
+        <el-menu-item id="author" index="3">
+            <img class="el-tooltip" src="http://tycoding.cn/author/avatar.png"/>
+            <el-dropdown>
+                  <span class="el-dropdown-link">TyCoding<i class="el-icon-arrow-down el-icon--right"></i></span>
+                <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item>首页</el-dropdown-item>
+                    <el-dropdown-item><a href="https://github.com/TyCoding" target="_blank">GitHub</a></el-dropdown-item>
+                    <el-dropdown-item><a href="http://tycoding.cn/" target="_blank">Blog</a></el-dropdown-item>
+                    <el-dropdown-item divided><a href="/logout">退出</a></el-dropdown-item>
+                </el-dropdown-menu>
+            </el-dropdown>
+        </el-menu-item>
+    </el-menu>
+
+    <!-- main -->
+    <div id="main">
+        <el-row :gutter="20">
+            <el-col :span="20" :offset="7">
+                <el-container>
+                    <div>
+                        <h3>优雅的入门Spring Boot框架，实现简单的CRUD。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&mdash;&mdash;&nbsp;By TyCoding</h3>
+                    </div>
+                </el-container>
+            </el-col>
+        </el-row>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <el-container>
+            <el-footer>
+                <el-row :gutter="20">
+                    <el-col :span="8" :offset="10">
+                        <div class="footer-inner">
+                            <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+                                <span class="with-love">
+                                    <i class="fa fa-heartbeat"></i>
+                                </span>
+                                <span class="author" itemprop="copyrightHolder">TyCoding</span>
+                            </div>
+                            <label>优雅的入门Spring Boot框架，实现简单的CRUD。页面使用Vue和ElementUI制作</label>
+                        </div>
+                    </el-col>
+                </el-row>
+            </el-footer>
+        </el-container>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" th:src="@{../../lib/vue/vue.js}"></script>
+<script type="text/javascript" th:src="@{../../lib/element-ui/lib/index.js}"></script>
+<script type="text/javascript" th:src="@{../../lib/vue/vue-resource.js}"></script>
+<script type="text/javascript" th:src="@{../../lib/vue/vuex.min.js}"></script>
+<script type="text/javascript" th:src="@{../../store/store.js}"></script>
+<script type="text/javascript" th:src="@{../../js/index.js}"></script>
+</html>

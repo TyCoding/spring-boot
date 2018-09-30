@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#tag {
+    margin: -19px 0px 16px -4px;
+    width: 106%;
+}
+
+.avue-tip {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.pagination {
+    margin-top: 18px;
+    /*float: right;*/
+    padding: 0 15px;
+}
+
+.el-table-column {
+    text-align: center;
+}
+
+.name {
+    color: black;
+}
+
+.count {
+    color: #409eff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 6px;
+}

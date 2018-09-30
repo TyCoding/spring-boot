@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{../../lib/element-ui/lib/theme-chalk/index.css}"/>
+    <link rel="stylesheet" th:href="@{../../css/login.css}">
+    <link rel="stylesheet" th:href="@{../../lib/font/icon/iconfont.css}">
+</head>
+<body>
+<div id="app">
+    <div v-if="true" id="login">
+        <el-main id="main">
+            <el-row type="flex" class="row-bg" justify="center">
+                <el-col :xs="8" :sm="9" :md="8" :lg="6" :xl="5">
+                    <el-card class="box-card">
+                        <div solt="header" class="header">
+                            <span class="item">登录</span>
+                        </div>
+                        <div id="form">
+                            <!-- 登录表单 -->
+                            <el-form :model="login" status-icon ref="login">
+                                <el-form-item prop="username"
+                                              :rules="[{ required: true, message: '用户名不能为空'}]">
+                                    <el-input prefix-icon="el-icon-ump-yonghu" v-model="login.username"
+                                              auto-complete="off"></el-input>
+                                </el-form-item>
+                                <el-form-item prop="password"
+                                              :rules="[{ required: true, message: '密码不能为空'}]">
+                                    <el-input prefix-icon="el-icon-ump-mima" type="password"
+                                              v-model="login.password" @keyup.enter.native="loginEnter('login')"
+                                              auto-complete="off"></el-input>
+                                </el-form-item>
+                                <el-form-item>
+                                    <el-checkbox class="check" v-model="login.remember">记住我</el-checkbox>
+                                </el-form-item>
+                                <el-form-item>
+                                    <el-button class="btn" type="primary" @click="submitForm('login')">登录
+                                    </el-button>
+                                </el-form-item>
+                            </el-form>
+                            <div>
+                                <p><a href="/register" class="tips">还没有账号？点我去注册</a></p>
+                            </div>
+                        </div>
+                    </el-card>
+                </el-col>
+            </el-row>
+        </el-main>
+    </div>
+</div>
+</body>
+<script type="text/javascript" th:src="@{../../lib/vue/vue.js}"></script>
+<!--<script type="text/javascript" th:src="@{../../lib/vue/vuex.min.js}"></script>-->
+<script type="text/javascript" th:src="@{../../lib/element-ui/lib/index.js}"></script>
+<script type="text/javascript" th:src="@{../../lib/vue/vue-resource.js}"></script>
+<!--<script type="text/javascript" th:src="@{../../store/store.js}"></script>-->
+<!-- 核心js代码 -->
+<script type="text/javascript" th:src="@{../../js/login.js}"></script>
+</html>

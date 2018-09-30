@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#author {
+    float: right;
+    border-bottom: none;
+}
+
+#logo {
+    float: left;
+    border-bottom: none;
+    color: #409EFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#author > img {
+    border: 1px solid #eee;
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    margin: 0 8px 0 10px;
+    padding: 2px;
+    width: 30px;
+}
+
+#author .el-dropdown {
+    display: inline-block;
+    position: relative;
+    color: #606266;
+    font-size: 14px;
+}
+
+.el-dropdown-menu__item a {
+    list-style: none;
+    line-height: 36px;
+    /*padding: 0 20px;*/
+    margin: 0;
+    font-size: 14px;
+    color: #606266;
+    cursor: pointer;
+    outline: 0;
+    text-decoration: none;
+}
+
+#main {
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+#main > .el-container {
+    width: 80%;
+    height: 100%;
+}
+
+#main .el-container > div > h3{
+    float: left;
+    border-bottom: none;
+    color: #409EFF;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.show {
+    width: 261px;
+    height: 326px;
+    display: inline-block;
+    margin: 2px 5px;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.show .img > img {
+    border-bottom: 1px solid #eee;
+    /*border-radius: 100%;*/
+    box-sizing: border-box;
+    height: 253px;
+    /*margin: 0 8px 0 10px;*/
+    padding: 2px;
+    width: 261px;
+}
+
+.show .price > span {
+    color: #F40;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.show .title {
+    margin-top: 10px;
+    font-size: 10px;
+    padding: 0 5px;
+}
+
+.footer {
+    border-top: solid 1px #e6e6e6;
+    margin-top: 50px;
+}
+
+.footer .footer-inner {
+    margin-top: 10px;
+    color: rgb(153, 153, 153);
+    margin-bottom: 25px;
+}
+
+.footer .footer-inner .copyright {
+    margin-bottom: 3px;
+}
+
+.footer .footer-inner label {
+    margin-left: -30%;
+}
+
+.pagination {
+    margin-top: 25px;
+    margin-left: -3%;
+}
+
+.sort {
+    margin-top: 30px;
+    margin-left: -21px;
+}
+
+.waring {
+    padding: 8px 16px;
+    background-color: #fff6f7;
+    border-radius: 4px;
+    border-left: 5px solid #fe6c6f;
+    margin: 20px 0;
+}
+
+.waring > div .el-form-item {
+    margin-bottom: 0px;
+}
