@@ -15,27 +15,34 @@
 
 ```
 .
-├── db  -- sql文件
-├── mvnw 
+├── README
+├── README.md
+├── db
+├── mvnw
 ├── mvnw.cmd
-├── pom.xml  -- 项目依赖
-└── src
-    ├── main
-    │   ├── java
-    │   │   └── cn
-    │   │       └── tycoding
-    │   │           ├── SpringbootApplication.java  -- Spring Boot启动类
-    │   │           ├── controller  -- MVC-WEB层
-    │   │           ├── entity  -- 实体类
-    │   │           ├── interceptor  -- 自定义拦截器
-    │   │           ├── mapper  -- mybatis-Mapper层接口
-    │   │           └── service  -- service业务层
-    │   └── resources  -- Spring Boot资源文件 
-    │       ├── application.yml  -- Spring Boot核心配置文件
-    │       ├── mapper  -- Mybatis Mapper层配置文件
-    │       ├── static  -- 前端静态文件
-    │       └── templates  -- Thymeleaf模板引擎识别的HTML页面目录
-    └── test  -- 测试文件
+├── pom.xml
+├── spring-boot.iml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── cn
+│   │   │       └── tycoding
+│   │   │           ├── SpringbootApplication.java  -- Spring Boot启动器类
+│   │   │           ├── controller  -- MVC-WEB层
+│   │   │           ├── entity  -- 实体类
+│   │   │           ├── interceptor  -- 自定义拦截器
+│   │   │           ├── mapper  -- mybatis-Mapper层映射接口，或称为DAO层
+│   │   │           └── service  -- service业务层
+│   │   └── resources  -- Spring Boot资源文件目录
+│   │       ├── application.yml  -- Spring Boot核心配置文件
+│   │       ├── mapper  -- Mybatis Mapper层XML配置文件
+│   │       ├── static  -- 前端静态文件（主要是JS、CSS、Image文件，一般不放HTML页面）
+│   │       │   ├── css
+│   │       │   ├── image
+│   │       │   ├── js
+│   │       │   ├── lib
+│   │       └── templates  -- Thymeleaf模板引擎识别的HTML页面目录，存放HTML页面（相当于之前的WEB—INF目录，即不能通过浏览器直接访问）
+│   └── test
 ```
 
 # 准备
