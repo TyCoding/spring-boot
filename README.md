@@ -4,12 +4,20 @@
 
 **技术栈**
 
-* 后端： SpringBoot + Mybatis
-* 前端： Vue.JS + ElementUI
+* 后端： SpringBoot2.x + Mybatis
+* 前端： Vue.JS2.x + ElementUI
 
 **测试环境**
 
 * IDEA + SpringBoot-2.0.5
+
+**启动说明**
+
+* 启动前，请配置好 [application.yml](https://github.com/TyCoding/spring-boot/blob/master/src/main/resources/application.yml) 中连接数据库的用户名和密码，以及Redis服务器的地址和端口信息。
+
+* 启动前，请创建数据库`seckill`，建表SQL语句放在：[/db/sys_schema.sql](https://github.com/TyCoding/spring-boot/blob/master/db/sys_schema.sql)。具体的建表和建库语句请仔细看SQL文件。
+
+* 配置完成后，运行位于 `src/main/cn/tycoding/`下的SpringbootApplication中的main方法，访问 `http://localhost:8080/` 进行API测试。
 
 **项目设计**
 
@@ -84,13 +92,13 @@ Spring Boot项目（即Maven项目），当然拥有最基础的Maven项目结�
 
 6. Spring Boot规定`resources`下的子级目录名要符合一定规则，一般我们设置`resources/static`为前端静态（JS,CSS）的存放目录；设置`resources/templates`作为HTML页面的存放目录。
 
-7. Spring Boot指定的Thymeleaf模板引擎文件目录`/resources/templates`是受保护的目录，想当与之前的WEB-INF文件夹，里面的静态资源不能直接访问，一般我们通过Controller映射访问。
+7. Spring Boot指定的Thymeleaf模板引擎文件目录`/resources/templates`是受保护的目录，这与之前的WEB项目的WEB-INF文件夹和类似，特点就是里面的静态资源不能直接访问，一般我们通过Controller映射访问。
 
 8. 建议将Mybatis-Mapper的XML映射文件放于`resources/`目录下，我这里设为`resources/mapper`目录，且`src/main/java/Mapper`下的Mapper层接口要使用`@Mapper`注解标识，不然mybatis找不到接口对应的XML映射文件。
 
-9. `SpringBootApplication.java`为项目的启动器类，项目不需要部署到Tomcat上，由SpringBoot提供的服务器部署项目（运行启动器类即可）；且SpringBoot会自动扫描该启动器同级和子级下用注解标识的Bean。
+9. `SpringBootApplication.java`为项目的启动器类，项目不需要部署到Tomcat上，由SpringBoot提供的服务器部署项目（运行启动器类即可）；且SpringBoot会自动扫描该启动器同级和子级下用注解标识的Bean，也就是之前我们配置的`<context:component-scan>`在SpringBoot中是完全不需类似的配置的。
 
-10. Spring Boot不建议使用JSP页面，如果想使用，请自行百度解决办法。
+10. Spring Boot不建议使用JSP页面，如果想使用，请自行百度解决办法。我们常用HTML页面+Thymeleaf模板引擎。Thyemeleaf模板引擎提供了很多内置语法，比如：可以通过`<div th:text="${xx}">`取出来后端存放在域对象中的数据。
 
 11. 上面说了Spring Boot提供的存放HTML静态页面的目录`resources/templates`是受保护的目录，访问其中的HTML页面要通过Controller映射，这就间接规定了你需要配置Spring的视图解析器，且Controller类不能使用`@RestController`标识。
 
